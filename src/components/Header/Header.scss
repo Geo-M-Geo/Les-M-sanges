@@ -1,0 +1,15 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__title{
+        font-family: 'Dancing Script', cursive;
+        font-size: 40px;
+    }
+    &__nav-bar{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
