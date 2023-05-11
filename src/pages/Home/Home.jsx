@@ -1,11 +1,14 @@
-import Banner from '../../components/Banner/Banner.jsx'
-import Header from '../../components/Header/Header.jsx'
+import Carousel from '../../components/Carousel/Carousel'
+import {photos} from '../../datas/data.js'
 
 function Home() {
+    // const data = photos.photos.map((saison, cover, index) => {
+    //     return <li key={index}>{saison}{cover}</li>
+    
     return (
+
         <div>
-            <Header />
-            {/* <Banner /> */}
+            <Carousel picture={photos.cover} saison={photos.saison} />
         </div>
     )
 }

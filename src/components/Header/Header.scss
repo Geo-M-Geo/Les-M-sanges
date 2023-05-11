@@ -1,15 +1,57 @@
-.header-container {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    &__title{
-        font-family: 'Dancing Script', cursive;
-        font-size: 40px;
-    }
-    &__nav-bar{
-        width: 200px;
+    align-items: center;
+    background-color: #013328;
+
+    // Logo and title part
+    &__logo-title{
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        margin-left: 20px;
+        text-decoration: none;        
+        &__title{
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            font-weight: 200;
+            color: white;
+            margin-left: 10px;
+        }
+        &__logo{
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    // Navbar part
+    &__menu {
+        padding-right: 20px;
+        &__dropdown-logo{
+            display: none;
+            @media only screen and (max-width: 700px) {
+                display: block;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &__navbar{
+            max-width: 300px;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__link {
+                text-decoration: none;
+                color: white;
+                font-size: 24px;
+                font-family: 'Dancing Script', cursive;
+                @media only screen and (max-width: 700px) {
+                    display: none;
+                }
+            }
+        }
     }
 }
