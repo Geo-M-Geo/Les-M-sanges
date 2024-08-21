@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #013328;
+    position: relative;
 
     // Logo and title part
     &__logo-title{
@@ -25,33 +26,54 @@
         }
     }
 
-    // Navbar part
-    &__menu {
-        padding-right: 20px;
-        &__dropdown-logo{
+// Menu navigation 
+    &__menu__normal {
+        margin-right: 20px;
+        @media only screen and (max-width: 700px) {
             display: none;
-            @media only screen and (max-width: 700px) {
-                display: block;
-                width: 40px;
-                height: 40px;
-            }
         }
-
-        &__navbar{
-            max-width: 300px;
-            gap: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &__link {
-                text-decoration: none;
+        &__link {
+                text-decoration: none;            
                 color: white;
                 font-size: 24px;
                 font-family: 'Dancing Script', cursive;
-                @media only screen and (max-width: 700px) {
-                    display: none;
+                padding-right: 20px;
+        }           
+    }
+//  Menu when the screen is under 700 px so start at tablet's size
+    &__menu__small-screen {
+        height: 100%;
+        display: none;
+        @media only screen and (max-width: 700px) {
+            margin-right: 5%;
+            display: block;
+        }
+        // Menu chevron button 
+        &__button{
+            background-color: #013328;
+            border: none;
+        }
+        &__opening{
+            display:flex;
+            flex-direction: column;
+            &__links{
+                background-color:#013328 ;
+                position: absolute;
+                top: 102px;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid white;
+                &__link{
+                    text-decoration: none;        
+                    color: white;
+                    font-size: 22px;
+                font-family: 'Dancing Script', cursive;
+                padding: 5px 10px;
+
                 }
             }
         }
+
     }
 }
